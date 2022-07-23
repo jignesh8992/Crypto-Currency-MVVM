@@ -8,7 +8,7 @@ Model — View — ViewModel (MVVM) with Clean Architecture is the industry-reco
   
   
   
-#### MVVM Clean Architecture Best Pratice:**
+#### MVVM Clean Architecture Best Pratice:
 - Avoid references to Views in ViewModels.
 - Instead of pushing data to the UI, let the UI observe changes to it.
 - Distribute responsibilities, add a domain layer if needed.
