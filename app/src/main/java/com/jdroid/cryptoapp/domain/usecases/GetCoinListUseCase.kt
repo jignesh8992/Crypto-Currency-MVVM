@@ -1,5 +1,6 @@
 package com.jdroid.cryptoapp.domain.usecases
 
+import com.jdroid.cryptoapp.R
 import com.jdroid.cryptoapp.common.Resource
 import com.jdroid.cryptoapp.domain.model.CoinModel
 import com.jdroid.cryptoapp.domain.model.toCoin
@@ -17,9 +18,11 @@ class GetCoinListUseCase @Inject constructor(private val repository: CoinReposit
             val coins = repository.getCoins().map { it.toCoin() }
             emit(Resource.Success(coins))
         } catch (e: HttpException) {
-            emit(Resource.Error(e.localizedMessage ?: "An unexpected error occured"))
+            emit(Resource.ServerError(R.string.server_error, "HttpException: ${e.localizedMessage}"))
         } catch (e: IOException) {
-            emit(Resource.Error("Couldn't reach server. Check your internet connection."))
+            emit(Resource.ServerError(R.string.server_error, "IOException: ${e.localizedMessage}"))
+        } catch (e: Exception) {
+            emit(Resource.Error(message = "Exception: ${e.localizedMessage}"))
         }
     }
 }

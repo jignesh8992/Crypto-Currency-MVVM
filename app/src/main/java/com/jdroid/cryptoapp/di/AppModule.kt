@@ -1,7 +1,6 @@
 package com.jdroid.cryptoapp.di
 
-import android.provider.SyncStateContract
-import  com.jdroid.cryptoapp.BuildConfig
+import com.jdroid.cryptoapp.BuildConfig
 import com.jdroid.cryptoapp.common.BASE_URL
 import com.jdroid.cryptoapp.data.remote.CoinApi
 import com.jdroid.cryptoapp.data.repository.CoinRepositoryImpl

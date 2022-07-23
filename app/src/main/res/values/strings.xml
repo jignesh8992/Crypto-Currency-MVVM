@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">CryptoApp</string>
+    <string name="app_name">Crypto Currency</string>
+    <string name="internal_error">Internal Error</string>
+    <string name="server_error">Server Error</string>
+    <string name="network_error">Network Error</string>
+    <string name="you_are_offline">You are offline, Please try after sometime</string>
+    <string name="button_retry">Retry</string>
+    <string name="button_cancel">Cancel</string>
 </resources>
